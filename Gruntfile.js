@@ -26,12 +26,19 @@ module.exports = function(grunt) {
                 files: './scss/**/*.scss',
                 tasks: ['dist']
             }
+        },
+        'gh-pages': {
+            options: {
+                base: 'dist'
+            },
+            src: ['**']
         }
     });
 
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-gh-pages');
 
     grunt.registerTask('default', ['sass', 'postcss']);
     grunt.registerTask('dist', ['sass', 'postcss']);
