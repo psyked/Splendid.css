@@ -8,107 +8,121 @@
     <link rel="stylesheet" href="splendid.css">
 </head>
 <body>
-<form>
-    <h1>Payment form</h1>
-    <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
-
-    <section>
-        <h2>Contact information</h2>
-
-        <fieldset>
-            <legend>Title</legend>
-            <ul>
-                <li>
-                    <label for="title_1">
-                        <input type="radio" id="title_1" name="title" value="M." />
-                        Mister
-                    </label>
-                </li>
-                <li>
-                    <label for="title_2">
-                        <input type="radio" id="title_2" name="title" value="Ms." />
-                        Miss
-                    </label>
-                </li>
-            </ul>
-        </fieldset>
-
-        <p>
-            <label for="name">
-                <span>Name: </span>
-                <input type="text" id="name" name="username" required />
-                <strong><abbr title="required">*</abbr></strong>
-            </label>
-        </p>
-
-        <p>
-            <label for="mail">
-                <span>E-mail: </span>
-                <input type="email" id="mail" name="usermail" required />
-                <strong><abbr title="required">*</abbr></strong>
-            </label>
-        </p>
-    </section>
-
-    <section>
-        <h2>Payment information</h2>
-
-        <p>
-            <label for="card">
-                <span>Card type:</span>
-                <select id="card" name="usercard">
-                    <option value="visa">Visa</option>
-                    <option value="mc">Mastercard</option>
-                    <option value="amex">American Express</option>
-                </select>
-            </label>
-        </p>
-        <p>
-            <label for="number">
-                <span>Card number:</span>
-                <input type="text" id="number" name="cardnumber" required />
-                <strong><abbr title="required">*</abbr></strong>
-            </label>
-        </p>
-        <p>
-            <label for="date">
-                <span>Expiration date:</span>
-                <input type="text" id="date" name="expiration" required />
-                <strong><abbr title="required">*</abbr></strong>
-                <em>formated as mm/yy</em>
-            </label>
-        </p>
-    </section>
-
-    <section>
-        <p>
-            <button>Validate the payment</button>
-        </p>
-    </section>
-    <p>
-        <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
-        <label for="taste_1">I like cherry</label>
-    </p>
-    <p>
-        <label for="taste_2">
-            <input type="checkbox" id="taste_2" name="taste_banana" value="1">
-            I like banana
-        </label>
-    </p>
+<form id="register">
+    <h1>Register for Miss Bakers Space Cadets</h1>
     <fieldset>
-        <legend>Fruit juice size</legend>
-        <p>
-            <input type="radio" name="size" id="size_1" value="small" />
-            <label for="size_1">Small</label>
-        </p>
-        <p>
-            <input type="radio" name="size" id="size_2" value="medium" />
-            <label for="size_2">Medium</label>
-        </p>
-        <p>
-            <input type="radio" name="size" id="size_3" value="large" />
-            <label for="size_3">Large</label>
-        </p>
+        <legend>Personal details</legend>
+        <div>
+            <label>First Name
+                <input id="given-name" name="given-name" type="text" placeholder="First name only" required autofocus>
+            </label>
+        </div>
+        <div>
+            <label>Last Name
+                <input id="family-name" name="family-name" type="text" placeholder="Last name only" required autofocus>
+            </label>
+        </div>
+        <div>
+            <label>Date of Birth
+                <input id="dob" name="dob" type="date" required>
+            </label>
+        </div>
+        <div>
+            <label>Email
+                <input id="email" name="email" type="email" placeholder="example@domain.com" required>
+            </label>
+        </div>
+        <div>
+            <label>URL
+                <input id="url" name="url" type="url" placeholder="http://mysite.com">
+            </label>
+        </div>
+        <div>
+            <label>Telephone
+                <input id="phone" name="phone" type="tel" placeholder="Eg. +447000 000000" required>
+            </label>
+        </div>
+        <div>
+            <label>Shoesize
+                <input id="shoes" name="shoes" type="number" min="5" max="18" step="0.5" value="9">
+            </label>
+        </div>
+        <div>
+            <label>Flying Skill level (1 low - 100 high)
+                <input id="skill" name="skill" type="range" min="1" max="100" value="0">
+                <output name="output" onforminput="value=a.value">0</output>
+            </label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Billing address</legend>
+        <div>
+            <label>Address
+                <textarea id="address" name="address" rows=5 required></textarea>
+            </label>
+        </div>
+        <div>
+            <label>Post code
+                <input id="postCode" name="postCode" type="text" required>
+            </label>
+        </div>
+        <div>
+            <label>Country
+                <input id="country" name="country" list="country-names" type="text" required>
+                <datalist id="country-names">
+                    <option label="England" value="England"></option>
+                    <option label="Northern Ireland" value="Northern Ireland"></option>
+                    <option label="Ireland" value="Ireland"></option>
+                    <option label="Scotland" value="Scotland"></option>
+                    <option label="Wales" value="Wales"></option>
+                </datalist>
+            </label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Card details</legend>
+        <fieldset>
+            <legend>Card type</legend>
+            <div class="card-type">
+                <input id="visa" name="cardtype" type="radio">
+                <label for="visa">VISA</label>
+                <input id="mastercard" name="cardtype" type="radio">
+                <label for="mastercard">Mastercard</label>
+                <input id="amex" name="cardtype" type="radio">
+                <label for="amex">AMEX</label>
+            </div>
+        </fieldset>
+        <div>
+            <label>Name
+                <input id="cardName" name="cardName" type="text" placeholder="Name as it appears on your card" required>
+            </label>
+        </div>
+        <div>
+            <label>Card number
+                <input id="cardNo" name="cardNo" type="number" required
+                       title="The sixteen digit number across the middle of your card.">
+            </label>
+        </div>
+        <div>
+            <label>Security code
+                <input id="security" name="security" type="number" required pattern="[0-9]{3}"
+                       title="The last three digits on the back of your card.">
+            </label>
+        </div>
+        <div>
+            <label>Expiry Date
+                <input id="expiry" name="expiry" type="month">
+            </label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <div class="confirmation-message">
+            <input id="confirmation" name="confirmation" type="checkbox">
+            <label for="confirmation">Checkbox</label>
+        </div>
+        <div>
+            <button type=submit>Place Order</button>
+        </div>
     </fieldset>
 </form>
 </body>
