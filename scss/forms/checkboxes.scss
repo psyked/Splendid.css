@@ -1,21 +1,15 @@
-$inactive: #9E9E9E;
-
 input[type=checkbox]
 {
     width: 1em;
     height: 1em;
     font: inherit;
     vertical-align: middle;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
     appearance: none;
     background: #fff;
     border-radius: .125em;
     box-sizing: border-box;
-    border: .125em solid $inactive;
-    box-shadow: inset 0 0 0 0 $indigo;
+    border: .125em solid $disabled-ui-color;
+    box-shadow: inset 0 0 0 0 $primary-ui-color;
     position: relative;
     font-size: 1.6em;
     margin-right: 1rem;
@@ -30,23 +24,23 @@ input[type=checkbox]
 
     &:not(:disabled):hover
     {
-        border-color: $astral;
+        border-color: $primary-ui-hover-color;
     }
 
     &:disabled
     {
-        background: lighten($inactive, 20%);
+        background: lighten($disabled-ui-color, 20%);
         cursor: default;
 
         &:before, &:after
         {
-            background: lighten($inactive, 20%);
+            background: lighten($disabled-ui-color, 20%);
         }
     }
 
     &:focus
     {
-        border: .125em solid $orange !important;
+        border: .125em solid $focus-color !important;
         outline: none;
     }
 
@@ -57,14 +51,14 @@ input[type=checkbox]
 
     &:checked
     {
-        border-color: $indigo;
-        box-shadow: inset 0 0 0 .5em $indigo;
+        border-color: $primary-ui-color;
+        box-shadow: inset 0 0 0 .5em $primary-ui-color;
         transition: transform .3s cubic-bezier(.2, .3, 0, 1), box-shadow .3s cubic-bezier(.2, .3, 0, 1), border-color 0s;
 
         &:disabled
         {
-            border-color: desaturate($indigo, 100%);
-            box-shadow: inset 0 0 0 .5em desaturate($indigo, 100%);
+            border-color: desaturate($primary-ui-color, 100%);
+            box-shadow: inset 0 0 0 .5em desaturate($primary-ui-color, 100%);
         }
     }
 

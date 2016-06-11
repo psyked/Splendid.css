@@ -1,7 +1,7 @@
 input[type="submit"], input[type="button"], button, .gl-button
 {
-    background-color: $indigo;
-    color: $white;
+    background-color: $primary-ui-color;
+    color: $primary-ui-alt-color;
     border: 0;
     border-radius: 4px;
     padding: 1.2rem 2rem;
@@ -10,23 +10,23 @@ input[type="submit"], input[type="button"], button, .gl-button
 
     &:focus
     {
-        border: .2rem solid $orange;
+        border: .2rem solid $focus-color;
         padding: 1rem 1.8rem;
         outline: none;
     }
 
     &:hover
     {
-        background-color: $astral;
+        background-color: $primary-ui-hover-color;
     }
 
     &.cancel-button
     {
-        background-color: desaturate($indigo, 100%);
+        background-color: desaturate($primary-ui-color, 100%);
 
         &:hover
         {
-            background-color: desaturate($astral, 100%);
+            background-color: desaturate($primary-ui-hover-color, 100%);
         }
     }
 
@@ -42,14 +42,14 @@ input[type="submit"], input[type="button"], button, .gl-button
 
     &:disabled
     {
-        background: $frenchgray;
-        color: $athensgray;
+        background: $disabled-ui-color;
+        color: $disabled-ui-alt-color;
         cursor: default;
 
         &:before, &:after
         {
-            background: $frenchgray;
-            color: $athensgray;
+            background: $disabled-ui-color;
+            color: $disabled-ui-alt-color;
         }
     }
 }
@@ -62,7 +62,7 @@ input[type="submit"], input[type="button"], button, .gl-button
 
     &:hover
     {
-        color: $white;
+        color: $primary-ui-alt-color;
     }
 }
 

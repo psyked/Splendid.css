@@ -1,19 +1,14 @@
-$inactive: #9E9E9E;
 input[type=radio]
 {
     width: 1em;
     height: 1em;
     font: inherit;
     vertical-align: middle;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
     appearance: none;
     background: #fff;
     border-radius: 50%;
     box-sizing: border-box;
-    border: .125em solid $inactive;
+    border: .125em solid $disabled-ui-color;
     position: relative;
     font-size: 1.6em;
     margin: .3em;
@@ -29,23 +24,23 @@ input[type=radio]
 
     &:not(:disabled):hover
     {
-        border-color: $astral;
+        border-color: $primary-ui-hover-color;
     }
 
     &:disabled
     {
-        background: lighten($inactive, 20%);
+        background: lighten($disabled-ui-color, 20%);
         cursor: default;
 
         &:before, &:after
         {
-            background: lighten($inactive, 20%);
+            background: lighten($disabled-ui-color, 20%);
         }
     }
 
     &:focus
     {
-        border: .125em solid $orange !important;
+        border: .125em solid $focus-color !important;
         outline: none;
     }
 
@@ -56,14 +51,14 @@ input[type=radio]
 
     &:checked
     {
-        border-color: $indigo;
+        border-color: $primary-ui-color;
         transition: transform .3s cubic-bezier(.2, .3, 0, 1), background-color .3s cubic-bezier(.2, .3, 0, 1), border-width .17s cubic-bezier(.2, .3, 0, 1), border-color 0s;
-        background-color: $indigo;
+        background-color: $primary-ui-color;
 
         &:disabled
         {
-            border-color: desaturate($indigo, 100%);
-            background-color: desaturate($indigo, 100%);
+            border-color: desaturate($primary-ui-color, 100%);
+            background-color: desaturate($primary-ui-color, 100%);
         }
 
         &:before
