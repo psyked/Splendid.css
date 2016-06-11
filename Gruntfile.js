@@ -22,6 +22,9 @@ module.exports = function(grunt) {
             }
         },
         watch: {
+            options: {
+                livereload: true
+            },
             sass: {
                 files: './scss/**/*.scss',
                 tasks: ['dist']
@@ -32,6 +35,15 @@ module.exports = function(grunt) {
                 base: 'dist'
             },
             src: ['**']
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 3000,
+                    base: 'dist',
+                    livereload: true
+                }
+            }
         }
     });
 
@@ -39,7 +51,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-gh-pages');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
-    grunt.registerTask('default', ['sass', 'postcss']);
+    grunt.registerTask('default', ['sass', 'postcss', 'connect', 'watch']);
     grunt.registerTask('dist', ['sass', 'postcss']);
 };

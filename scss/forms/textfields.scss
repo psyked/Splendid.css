@@ -1,0 +1,18 @@
+input[type="text"], input[type="password"]
+{
+    max-width: 100%;
+    border: 1px solid $ui-outline-color;
+    border-radius: 4px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+
+    &:focus
+    {
+        outline: .2em solid $focus-color;
+    }
+}
+
+input:disabled
+{
+    background-color: $disabled-ui-alt-color;
+}

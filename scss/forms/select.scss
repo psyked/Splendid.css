@@ -1,0 +1,14 @@
+select
+{
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid $ui-outline-color;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin: 1rem 0;
+
+    &:focus
+    {
+        outline: .2em solid $focus-color;
+    }
+}
