@@ -1,2 +1,5 @@
 .sass-cache/
 *.css.map
+.grunt
+node_modules
+.idea
