@@ -6,20 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Splendid.css</title>
     <link rel="stylesheet" href="splendid.css">
+    <style>
+        header {
+            background: #27ae60;
+            padding: 2rem 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: .67em 0;
+            color: white;
+            text-shadow: #2c3e50 1px 1px 2px;
+        }
+
+        header p {
+            color: white;
+            text-shadow: #2c3e50 1px 1px 2px;
+        }
+
+        article p {
+            line-height: 1.4rem;
+        }
+
+        article p span {
+            background: gold;
+            display: inline-block;
+            padding: .1rem .2rem;
+            margin: -.1rem -.2rem;
+        }
+
+        article, form {
+            padding: 0 1rem;
+        }
+    </style>
 </head>
 <body>
 <section>
     <header>
         <h1>Splendid.css</h1>
-        <p><em>Delightful defaults</em> for humdrum HTML, using a little CSS sparkle.</p>
+        <p><em>Delightful defaults</em> for humdrum HTML.</p>
     </header>
     <article>
-        <p>The default appearance of HTML elements is a little dull, we shouldn't have to worry about adding custom css
-            classes or changing the markup of elements in our applications to make them fit the expectations of a
-            complex framework.</p>
-        <p>Splendid.css offers a new set of styles for the basic HTML elements, with delightful details baked in to the
-            core, important basics like accessibility, and all with minimal modification to your existing HTML, so
-            there's no need to go back to retrofit your HTML with a whole slew of new CSS classes.</p>
+        <p>The default HTML elements are a <span>little dull</span>, and we shouldn't have to worry about adding custom css
+            classes to the HTML or changing the markup to make things look beautiful.</p>
+        <p>Splendid.css is a set of styles for HTML elements, with <span>delightful details</span>
+            baked in at the core, and requiring <span>minimal modification</span> to existing HTML so you don't need to
+            go back to retrofit your HTML with a slew of new classes.</p>
     </article>
 </section>
 <section>
