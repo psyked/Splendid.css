@@ -383,6 +383,24 @@ input[type="text"], input[type="password"] {
 input:disabled {
   background-color: #BDC3C7; }
 
+select {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #95A5A6;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 1rem 0; }
+  select:focus {
+    outline: 0.2em solid #E67E22; }
+
+textarea {
+  border: 1px solid #95A5A6;
+  border-radius: 4px;
+  padding: 0.5rem;
+  background-color: #ffffff; }
+  textarea:focus {
+    outline: 0.2em solid #E67E22; }
+
 input[type="submit"], input[type="button"], button {
   background-color: #2980B9;
   color: #ffffff;
