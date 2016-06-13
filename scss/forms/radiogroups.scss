@@ -22,12 +22,14 @@ input[type=radio]
         cursor: pointer;
     }
 
-    &:not(:disabled):hover
+    &:not(:disabled):hover,
+    &:not(.disabled):hover
     {
         border-color: $primary-ui-hover-color;
     }
 
-    &:disabled
+    &:disabled,
+    &.disabled
     {
         background: lighten($disabled-ui-color, 20%);
         cursor: default;
@@ -38,24 +40,28 @@ input[type=radio]
         }
     }
 
-    &:focus
+    &:focus,
+    &.focus
     {
         border: .125em solid $focus-color !important;
         outline: none;
     }
 
-    &:not(:disabled):active
+    &:not(:disabled):active,
+    &:not(.disabled):active
     {
         transform: scale(.8);
     }
 
-    &:checked
+    &:checked,
+    &.checked
     {
         border-color: $primary-ui-color;
         transition: transform .3s cubic-bezier(.2, .3, 0, 1), background-color .3s cubic-bezier(.2, .3, 0, 1), border-width .17s cubic-bezier(.2, .3, 0, 1), border-color 0s;
         background-color: $primary-ui-color;
 
-        &:disabled
+        &:disabled,
+        &.disabled
         {
             border-color: desaturate($primary-ui-color, 100%);
             background-color: desaturate($primary-ui-color, 100%);

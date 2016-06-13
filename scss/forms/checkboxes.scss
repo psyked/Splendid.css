@@ -12,6 +12,7 @@ input[type=checkbox]
     box-shadow: inset 0 0 0 0 $primary-ui-color;
     position: relative;
     font-size: 1.6em;
+    margin: .3em;
     margin-right: 1rem;
     cursor: pointer;
 
@@ -22,12 +23,14 @@ input[type=checkbox]
         cursor: pointer;
     }
 
-    &:not(:disabled):hover
+    &:not(:disabled):hover,
+    &:not(.disabled):hover
     {
         border-color: $primary-ui-hover-color;
     }
 
-    &:disabled
+    &:disabled,
+    &.disabled
     {
         background: lighten($disabled-ui-color, 20%);
         cursor: default;
@@ -38,24 +41,28 @@ input[type=checkbox]
         }
     }
 
-    &:focus
+    &:focus,
+    &.focus
     {
         border: .125em solid $focus-color !important;
         outline: none;
     }
 
-    &:active
+    &:active,
+    &.active
     {
         transform: scale(.8);
     }
 
-    &:checked
+    &:checked,
+    &.checked
     {
         border-color: $primary-ui-color;
         box-shadow: inset 0 0 0 .5em $primary-ui-color;
         transition: transform .3s cubic-bezier(.2, .3, 0, 1), box-shadow .3s cubic-bezier(.2, .3, 0, 1), border-color 0s;
 
-        &:disabled
+        &:disabled,
+        &.disabled
         {
             border-color: desaturate($primary-ui-color, 100%);
             box-shadow: inset 0 0 0 .5em desaturate($primary-ui-color, 100%);

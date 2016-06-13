@@ -408,26 +408,23 @@ input[type="submit"], input[type="button"], button {
   border-radius: 4px;
   padding: 1.2rem 2rem;
   cursor: pointer;
+  margin: .3em;
   transition: background-color 0.2s ease; }
-  input[type="submit"]:focus, input[type="button"]:focus, button:focus {
+  input[type="submit"]:focus, input[type="submit"].focus, input[type="button"]:focus, input[type="button"].focus, button:focus, button.focus {
     border: 0.2rem solid #E67E22;
     padding: 1rem 1.8rem;
     outline: none; }
-  input[type="submit"]:hover, input[type="button"]:hover, button:hover {
+  input[type="submit"]:hover, input[type="submit"].hover, input[type="button"]:hover, input[type="button"].hover, button:hover, button.hover {
     background-color: #3498DB; }
-  input[type="submit"].cancel-button, input[type="button"].cancel-button, button.cancel-button {
-    background-color: #717171; }
-    input[type="submit"].cancel-button:hover, input[type="button"].cancel-button:hover, button.cancel-button:hover {
-      background-color: #888888; }
   input[type="submit"].small-button, input[type="button"].small-button, button.small-button {
     padding: 0.6rem 1rem; }
     input[type="submit"].small-button:focus, input[type="button"].small-button:focus, button.small-button:focus {
       padding: .4rem .8rem; }
-  input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled {
+  input[type="submit"]:disabled, input[type="submit"].disabled, input[type="button"]:disabled, input[type="button"].disabled, button:disabled, button.disabled {
     background: #7F8C8D;
     color: #BDC3C7;
     cursor: default; }
-    input[type="submit"]:disabled:before, input[type="submit"]:disabled:after, input[type="button"]:disabled:before, input[type="button"]:disabled:after, button:disabled:before, button:disabled:after {
+    input[type="submit"]:disabled:before, input[type="submit"]:disabled:after, input[type="submit"].disabled:before, input[type="submit"].disabled:after, input[type="button"]:disabled:before, input[type="button"]:disabled:after, input[type="button"].disabled:before, input[type="button"].disabled:after, button:disabled:before, button:disabled:after, button.disabled:before, button.disabled:after {
       background: #7F8C8D;
       color: #BDC3C7; }
 
@@ -444,28 +441,29 @@ input[type=checkbox] {
   box-shadow: inset 0 0 0 0 #2980B9;
   position: relative;
   font-size: 1.6em;
+  margin: .3em;
   margin-right: 1rem;
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.2, 0.3, 0, 1), box-shadow 0.3s cubic-bezier(0.2, 0.3, 0, 1), border-color 0s linear 0.17s; }
   input[type=checkbox] + label {
     cursor: pointer; }
-  input[type=checkbox]:not(:disabled):hover {
+  input[type=checkbox]:not(:disabled):hover, input[type=checkbox]:not(.disabled):hover {
     border-color: #3498DB; }
-  input[type=checkbox]:disabled {
+  input[type=checkbox]:disabled, input[type=checkbox].disabled {
     background: #b5bcbd;
     cursor: default; }
-    input[type=checkbox]:disabled:before, input[type=checkbox]:disabled:after {
+    input[type=checkbox]:disabled:before, input[type=checkbox]:disabled:after, input[type=checkbox].disabled:before, input[type=checkbox].disabled:after {
       background: #b5bcbd; }
-  input[type=checkbox]:focus {
+  input[type=checkbox]:focus, input[type=checkbox].focus {
     border: 0.125em solid #E67E22 !important;
     outline: none; }
-  input[type=checkbox]:active {
+  input[type=checkbox]:active, input[type=checkbox].active {
     transform: scale(0.8); }
-  input[type=checkbox]:checked {
+  input[type=checkbox]:checked, input[type=checkbox].checked {
     border-color: #2980B9;
     box-shadow: inset 0 0 0 0.5em #2980B9;
     transition: transform 0.3s cubic-bezier(0.2, 0.3, 0, 1), box-shadow 0.3s cubic-bezier(0.2, 0.3, 0, 1), border-color 0s; }
-    input[type=checkbox]:checked:disabled {
+    input[type=checkbox]:checked:disabled, input[type=checkbox]:checked.disabled, input[type=checkbox].checked:disabled, input[type=checkbox].checked.disabled {
       border-color: #717171;
       box-shadow: inset 0 0 0 0.5em #717171; }
   input[type=checkbox]:before, input[type=checkbox]:after {
@@ -506,26 +504,26 @@ input[type=radio] {
   transition: transform 0.3s cubic-bezier(0.2, 0.3, 0, 1), border-width 0.17s cubic-bezier(0.2, 0.3, 0, 1), border-color 0s linear 0.17s; }
   input[type=radio] + label {
     cursor: pointer; }
-  input[type=radio]:not(:disabled):hover {
+  input[type=radio]:not(:disabled):hover, input[type=radio]:not(.disabled):hover {
     border-color: #3498DB; }
-  input[type=radio]:disabled {
+  input[type=radio]:disabled, input[type=radio].disabled {
     background: #b5bcbd;
     cursor: default; }
-    input[type=radio]:disabled:before, input[type=radio]:disabled:after {
+    input[type=radio]:disabled:before, input[type=radio]:disabled:after, input[type=radio].disabled:before, input[type=radio].disabled:after {
       background: #b5bcbd; }
-  input[type=radio]:focus {
+  input[type=radio]:focus, input[type=radio].focus {
     border: 0.125em solid #E67E22 !important;
     outline: none; }
-  input[type=radio]:not(:disabled):active {
+  input[type=radio]:not(:disabled):active, input[type=radio]:not(.disabled):active {
     transform: scale(0.8); }
-  input[type=radio]:checked {
+  input[type=radio]:checked, input[type=radio].checked {
     border-color: #2980B9;
     transition: transform 0.3s cubic-bezier(0.2, 0.3, 0, 1), background-color 0.3s cubic-bezier(0.2, 0.3, 0, 1), border-width 0.17s cubic-bezier(0.2, 0.3, 0, 1), border-color 0s;
     background-color: #2980B9; }
-    input[type=radio]:checked:disabled {
+    input[type=radio]:checked:disabled, input[type=radio]:checked.disabled, input[type=radio].checked:disabled, input[type=radio].checked.disabled {
       border-color: #717171;
       background-color: #717171; }
-    input[type=radio]:checked:before {
+    input[type=radio]:checked:before, input[type=radio].checked:before {
       transform: translate(0.325em, 0.325em) scale(0.4, 0.4); }
   input[type=radio]:before {
     content: '';

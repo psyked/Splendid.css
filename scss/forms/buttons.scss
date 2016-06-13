@@ -6,28 +6,19 @@ input[type="submit"], input[type="button"], button
     border-radius: 4px;
     padding: 1.2rem 2rem;
     cursor: pointer;
+    margin: .3em;
     transition: background-color 0.2s ease;
 
-    &:focus
+    &:focus, &.focus
     {
         border: .2rem solid $focus-color;
         padding: 1rem 1.8rem;
         outline: none;
     }
 
-    &:hover
+    &:hover, &.hover
     {
         background-color: $primary-ui-hover-color;
-    }
-
-    &.cancel-button
-    {
-        background-color: desaturate($primary-ui-color, 100%);
-
-        &:hover
-        {
-            background-color: desaturate($primary-ui-hover-color, 100%);
-        }
     }
 
     &.small-button
@@ -40,7 +31,7 @@ input[type="submit"], input[type="button"], button
         }
     }
 
-    &:disabled
+    &:disabled, &.disabled
     {
         background: $disabled-ui-color;
         color: $disabled-ui-alt-color;
