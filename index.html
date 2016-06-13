@@ -7,20 +7,20 @@
     <title>Splendid.css</title>
     <link rel="stylesheet" href="splendid.css">
     <style>
-        header {
+        header header {
             background: #27ae60;
             padding: 2rem 2rem 1rem;
             text-align: center;
         }
 
-        header h1 {
+        header header h1 {
             font-size: 2em;
             margin: .67em 0;
             color: white;
             text-shadow: #2c3e50 1px 1px 2px;
         }
 
-        header p {
+        header header p {
             color: white;
             text-shadow: #2c3e50 1px 1px 2px;
         }
@@ -39,25 +39,79 @@
         article, form {
             padding: 0 1rem;
         }
+
+        body > section {
+            margin: 1rem;
+            padding: 0 1rem;
+            border: .1rem solid #ccc
+        }
+
+        body > section article {
+            padding: 0 0 1rem 0;
+        }
     </style>
 </head>
 <body>
+<header>
+    <section>
+        <header>
+            <h1>Splendid.css</h1>
+            <p><em>Delightful defaults</em> for humdrum HTML.</p>
+        </header>
+        <article>
+            <p>The default HTML elements are a <span>little dull</span>, and we shouldn't have to worry about adding
+                custom css
+                classes to the HTML or changing the markup to make things look beautiful.</p>
+            <p>Splendid.css is a set of styles for HTML elements, with <span>delightful details</span>
+                baked in at the core, and requiring <span>minimal modification</span> to existing HTML so you don't need
+                to
+                go back to retrofit your HTML with a slew of new classes.</p>
+        </article>
+    </section>
+</header>
 <section>
-    <header>
-        <h1>Splendid.css</h1>
-        <p><em>Delightful defaults</em> for humdrum HTML.</p>
-    </header>
+    <header><h2>Button Elements</h2></header>
     <article>
-        <p>The default HTML elements are a <span>little dull</span>, and we shouldn't have to worry about adding custom css
-            classes to the HTML or changing the markup to make things look beautiful.</p>
-        <p>Splendid.css is a set of styles for HTML elements, with <span>delightful details</span>
-            baked in at the core, and requiring <span>minimal modification</span> to existing HTML so you don't need to
-            go back to retrofit your HTML with a slew of new classes.</p>
+        <div><button>Simple Button</button></div>
+        <div><button class="hover">Hover State</button></div>
+        <div><button class="active">Active State</button></div>
+        <div><button class="focus">Focused State</button></div>
+        <div><button disabled>Disabled Button</button></div>
     </article>
 </section>
 <section>
+    <header><h2>Checkbox Elements</h2></header>
+    <article>
+        <div><label><input type="checkbox">Simple Checkbox</label></div>
+        <div><label><input type="checkbox" checked>Checked Checkbox</label></div>
+        <div><label><input type="checkbox" class="hover">Hover State</label></div>
+        <div><label><input type="checkbox" class="hover" checked>Checked Hover State</label></div>
+        <div><label><input type="checkbox" class="active">Active State</label></div>
+        <div><label><input type="checkbox" class="active" checked>Checked Active State</label></div>
+        <div><label><input type="checkbox" class="focus">Focused State</label></div>
+        <div><label><input type="checkbox" class="focus" checked>Checked Focused State</label></div>
+        <div><label><input type="checkbox" class="disabled">Disabled State</label></div>
+        <div><label><input type="checkbox" class="disabled" checked>Checked Disabled State</label></div>
+    </article>
+</section>
+<section>
+    <header><h2>Radiogroup Elements</h2></header>
+    <article>
+        <div><label><input type="radio">Simple Radio Button</label></div>
+        <div><label><input type="radio" checked>Checked Radio Button</label></div>
+        <div><label><input type="radio" class="hover">Hover State</label></div>
+        <div><label><input type="radio" class="hover" checked>Checked Hover State</label></div>
+        <div><label><input type="radio" class="active">Active State</label></div>
+        <div><label><input type="radio" class="active" checked>Checked Active State</label></div>
+        <div><label><input type="radio" class="focus">Focused State</label></div>
+        <div><label><input type="radio" class="focus" checked>Checked Focused State</label></div>
+        <div><label><input type="radio" class="disabled">Disabled State</label></div>
+        <div><label><input type="radio" class="disabled" checked>Checked Disabled State</label></div>
+    </article>
+</section>
+<!--<section>
+    <header><h2>Complete Form Example</h2></header>
     <form id="register">
-        <h1>Complete Form Example</h1>
         <fieldset>
             <legend>Personal details</legend>
             <div>
@@ -176,6 +230,6 @@
             </div>
         </fieldset>
     </form>
-</section>
+</section>-->
 </body>
 </html>
