@@ -1,6 +1,4 @@
-# Splendid.css
-
-## Delightful defaults for humdrum HTML.
+# Delightful defaults for humdrum HTML.
 
 The default HTML elements are a little dull, and we shouldn't have to worry about adding custom css classes to the HTML or changing the markup to make things look beautiful.
 
